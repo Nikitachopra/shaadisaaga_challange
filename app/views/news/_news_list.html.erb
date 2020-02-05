@@ -1,0 +1,13 @@
+<div>
+    <%@news.each do |news| %>
+        <div class="bordered-div">
+
+            <% if user_signed_in? %>
+                <div style="text-align: end;"><%= link_to "Delete", remove_news_news_path(news.id), method: "post" %></div>
+            <%end%>
+
+            <p><%= link_to news_path(news.id) do %><strong>Title:</strong> <%= news.title %><%end%></p>
+            <p><strong>Description:</strong> <%= news.description[0..50] %>..</p>
+        </div>
+    <%end%>
+</div>

@@ -1,0 +1,11 @@
+.header-div{
+    background: black;
+    color: white;
+    font-size: 24px;
+}
+.header-div span{
+    padding-left: 40px;
+}
+.header-div a{
+    color: white;
+}

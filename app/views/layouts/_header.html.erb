@@ -1,0 +1,7 @@
+<div class="header-div">
+    <span><%= link_to news_index_path do %> All news <%end%></span>
+    <%if user_signed_in? %>
+        <span><%= link_to  read_list_news_index_path  do %>Read news<%end%></span>
+    <%end%>
+    <span><%unless user_signed_in? %><%= link_to "Sign in", new_user_session_path %><%end%></span>
+</div>
